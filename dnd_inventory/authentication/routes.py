@@ -21,9 +21,11 @@ def signup():
 
     return jsonify(response)
 
-# @auth.route('/signup', methods = ['GET'])
-# def retrieve(email):
-#     User.query.get(email)
+@auth.route('/signup', methods = ['GET'])
+def retrieve(email):
+    user = User.query.get(email)
+    response = user_schema.dump(user)
+    return jsonify(response)
 
 
 
