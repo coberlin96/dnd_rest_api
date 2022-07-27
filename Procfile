@@ -1,0 +1,1 @@
+web: gunicorn dnd_inventory:app --preload
